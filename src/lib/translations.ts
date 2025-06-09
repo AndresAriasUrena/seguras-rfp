@@ -288,7 +288,7 @@ export const translations = {
       title: "¿Listo para Transformar su Negocio?",
       subtitle: "Construyamos juntos su futuro digital",
       primary: "Agendar una Llamada",
-      secondary: "Descargar Propuesta PDF",
+      secondary: "Solicitar Propuesta PDF",
       button: "Contáctanos"
     },
 
@@ -600,7 +600,7 @@ export const translations = {
       title: "Ready to Transform Your Business?",
       subtitle: "Let's build your digital future together",
       primary: "Schedule a Call",
-      secondary: "Download Proposal PDF",
+      secondary: "Request Proposal PDF",
       button: "Get in Touch"
     },
 

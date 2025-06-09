@@ -23,7 +23,11 @@ const CTASection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <a href="mailto:hola@aurigital.com">
+          <a 
+            href="https://wa.me/50688888169?text=Hola! Me interesa la propuesta para Seguras. Me gustaría agendar una llamada para discutir los detalles del proyecto." 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <Button 
               variant="primary" 
               size="lg"
@@ -32,13 +36,19 @@ const CTASection = () => {
               {cta.primary}
             </Button>
           </a>
-          <Button 
-            variant="outline" 
-            size="lg"
-            icon={Download}
+          <a 
+            href="https://wa.me/50688888169?text=Hola! Me interesa recibir la propuesta completa en PDF para el proyecto de Seguras. ¿Podrían envíarmela?" 
+            target="_blank" 
+            rel="noopener noreferrer"
           >
-            {cta.secondary}
-          </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              icon={Download}
+            >
+              {cta.secondary}
+            </Button>
+          </a>
         </div>
 
         {/* Contact Info Cards */}
@@ -49,8 +59,13 @@ const CTASection = () => {
             </div>
             <h3 className="font-bold text-lg mb-2">Llamada Directa</h3>
             <p className="text-gray-600 mb-4">Hablemos sobre tu proyecto</p>
-            <a href="tel:+50688888169" className="text-primary font-semibold hover:underline">
-              +506 8888-8169
+            <a 
+              href="https://wa.me/50688888169?text=Hola! Me gustaría hablar directamente sobre la propuesta para Seguras." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary font-semibold hover:underline"
+            >
+              +506 8888-8169 (WhatsApp)
             </a>
           </div>
 

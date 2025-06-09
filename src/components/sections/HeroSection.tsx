@@ -4,7 +4,7 @@
 
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/Button';
-import { ArrowRight, Download, Calendar } from 'lucide-react';
+import { ArrowRight, Download, Calendar, Zap, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function HeroSection() {
@@ -50,23 +50,29 @@ export function HeroSection() {
               >
                 {t.hero.cta.primary}
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                icon={Download}
+              <a 
+                href="https://wa.me/50688888169?text=Hola! Me interesa recibir la propuesta completa en PDF para el proyecto de Seguras. ¿Podrían envíarmela?" 
+                target="_blank" 
+                rel="noopener noreferrer"
               >
-                {t.hero.cta.secondary}
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  icon={Download}
+                >
+                  {t.hero.cta.secondary}
+                </Button>
+              </a>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
                 <div className="text-3xl font-bold text-primary mb-1">
                   $12,000 USD
                 </div>
                 <div className="text-gray-600">{t.hero.budget}</div>
               </div>
-              <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
                 <div className="text-3xl font-bold text-primary mb-1">
                   12 {t.timeline.weeks}
                 </div>
@@ -75,66 +81,118 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Visual element */}
+          {/* Improved Visual element with better styling and alignment */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative flex justify-center"
           >
-            <div className="relative">
-              {/* Main card */}
-              <div className="bg-dark rounded-2xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                <div className="bg-primary/20 rounded-lg p-6 mb-4">
+            <div className="relative w-full max-w-md">
+              {/* Main card - Dark theme like the PDF */}
+              <motion.div 
+                className="bg-gray-900 rounded-2xl p-8 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 relative z-10"
+                whileHover={{ scale: 1.02 }}
+              >
+                {/* Header section */}
+                <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-6 mb-6 border border-primary/20">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">S</span>
+                    <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center">
+                      <span className="text-white font-bold text-2xl">S</span>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-xl">SEGURAS</h3>
-                      <p className="text-gray-400 text-sm">Digital Platform</p>
+                      <h3 className="text-white font-bold text-2xl tracking-wide">SEGURAS</h3>
+                      <p className="text-gray-400 text-sm font-medium">Digital Platform</p>
                     </div>
+                  </div>
+                  
+                  {/* Status indicator */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-green-400 text-sm font-medium">MVP Ready</span>
                   </div>
                 </div>
                 
                 {/* Feature cards */}
-                <div className="space-y-3">
-                  <div className="bg-dark-lighter rounded-lg p-4">
-                    <h4 className="text-white font-medium mb-1">E-Commerce Store</h4>
+                <div className="space-y-4">
+                  <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 hover:border-primary/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Globe className="w-4 h-4 text-primary" />
+                      </div>
+                      <h4 className="text-white font-semibold">E-Commerce Store</h4>
+                    </div>
                     <p className="text-gray-400 text-sm">WooCommerce + Next.js</p>
                   </div>
-                  <div className="bg-dark-lighter rounded-lg p-4">
-                    <h4 className="text-white font-medium mb-1">Inventory Integration</h4>
+                  
+                  <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 hover:border-primary/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-primary" />
+                      </div>
+                      <h4 className="text-white font-semibold">Inventory Integration</h4>
+                    </div>
                     <p className="text-gray-400 text-sm">QuPOS Sync</p>
                   </div>
-                  <div className="bg-dark-lighter rounded-lg p-4">
-                    <h4 className="text-white font-medium mb-1">CRM & Analytics</h4>
+                  
+                  <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 hover:border-primary/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                      </div>
+                      <h4 className="text-white font-semibold">CRM & Analytics</h4>
+                    </div>
                     <p className="text-gray-400 text-sm">Data-driven insights</p>
                   </div>
                 </div>
-              </div>
 
-              {/* Floating elements */}
+                {/* Bottom accent */}
+                <div className="mt-6 pt-4 border-t border-gray-700">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-400">Headless Architecture</span>
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <div className="w-2 h-2 bg-primary/60 rounded-full"></div>
+                      <div className="w-2 h-2 bg-primary/30 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating elements - Better positioned and styled */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-8 -right-8 bg-white rounded-xl shadow-lg p-4"
+                className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100 z-20"
               >
-                <Calendar className="w-6 h-6 text-primary mb-2" />
-                <p className="text-sm font-medium">2 Weeks</p>
-                <p className="text-xs text-gray-500">Landing Page</p>
+                <div className="flex items-center gap-2 mb-2">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-bold text-gray-900">2 Weeks</span>
+                </div>
+                <p className="text-xs text-gray-500 font-medium">Landing Page</p>
               </motion.div>
 
               <motion.div
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-lg p-4"
+                transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+                className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100 z-20"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
-                  <span className="text-sm font-medium">Mobile First</span>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm font-bold text-gray-900">Mobile First</span>
                 </div>
-                <p className="text-xs text-gray-500">Responsive Design</p>
+                <p className="text-xs text-gray-500 font-medium">Responsive Design</p>
+              </motion.div>
+
+              {/* Additional floating element */}
+              <motion.div
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+                className="absolute top-1/2 -left-8 bg-primary rounded-full p-3 shadow-lg z-20"
+              >
+                <Zap className="w-4 h-4 text-white" />
               </motion.div>
             </div>
           </motion.div>
