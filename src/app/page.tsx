@@ -5,6 +5,7 @@
 import { Navigation } from '@/components/ui/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { SummarySection } from '@/components/sections/SummarySection';
+import ProjectScopeSection from '@/components/sections/ProjectScope';
 import TechnologySection from '@/components/sections/TechnologySection';
 import PricingSection from '@/components/sections/PricingSection';
 import TimelineSection from '@/components/sections/TimelineSection';
@@ -18,6 +19,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <SummarySection />
+        <ProjectScopeSection />
         <TechnologySection />
         <PricingSection />
         <TimelineSection />

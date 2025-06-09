@@ -11,13 +11,14 @@ const TimelineSection = () => {
   const stats = t.timeline.stats;
 
   return (
-    <section className="py-20 px-8 bg-gray-50">
+    <section id="timeline" className="py-20 px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.timeline.title}</h2>
           <p className="text-xl text-gray-600">{t.timeline.subtitle}</p>
         </div>
 
+        {/* Timeline Navigation - Now shows all 6 steps */}
         <div className="mb-12">
           <div className="relative">
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 transform -translate-y-1/2"></div>
@@ -43,6 +44,7 @@ const TimelineSection = () => {
           </div>
         </div>
 
+        {/* Active Step Details */}
         <div className="mt-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500">
             <div className={`h-2 bg-gradient-to-r ${timelineData[activeWeek].color}`} />
@@ -57,6 +59,7 @@ const TimelineSection = () => {
                 </div>
               </div>
 
+              {/* Tasks Grid */}
               <div className="grid md:grid-cols-2 gap-4">
                 {timelineData[activeWeek].tasks.map((task, index) => (
                   <div key={index} className="flex items-start">
@@ -70,6 +73,7 @@ const TimelineSection = () => {
                 ))}
               </div>
 
+              {/* Milestone Badge */}
               {timelineData[activeWeek].milestone && (
                 <div className="mt-6 p-4 bg-green-100 rounded-lg border border-green-300">
                   <div className="flex items-center">
@@ -84,6 +88,7 @@ const TimelineSection = () => {
           </div>
         </div>
 
+        {/* Statistics */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">

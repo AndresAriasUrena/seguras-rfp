@@ -20,6 +20,7 @@ const TechnologySection = () => {
           </p>
         </div>
 
+        {/* Technology Stack - Now shows all 3 sections */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {techs.map((tech, index) => (
             <div
@@ -61,6 +62,7 @@ const TechnologySection = () => {
           ))}
         </div>
 
+        {/* Strategic Benefits */}
         <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl p-8 text-white">
           <h3 className="text-2xl font-bold mb-8 text-center">{t.technology.benefitsTitle}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
