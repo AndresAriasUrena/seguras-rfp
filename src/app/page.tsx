@@ -8,6 +8,8 @@ import { SummarySection } from '@/components/sections/SummarySection';
 import TechnologySection from '@/components/sections/TechnologySection';
 import PricingSection from '@/components/sections/PricingSection';
 import TimelineSection from '@/components/sections/TimelineSection';
+import { CTASection } from '@/components/sections/CTASection';
+import { Footer } from '@/components/sections/Footer';
 
 export default function Home() {
   return (
@@ -19,7 +21,9 @@ export default function Home() {
         <TechnologySection />
         <PricingSection />
         <TimelineSection />
+        <CTASection />
       </main>
+      <Footer />
     </>
   );
 }

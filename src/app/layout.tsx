@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { LanguageProvider } from "@/hooks/useLanguage";
+import { ClientLayout } from "@/components/ClientLayout";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,9 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body>
-        <LanguageProvider>
+        <ClientLayout>
           {children}
-        </LanguageProvider>
+        </ClientLayout>
       </body>
     </html>
   );

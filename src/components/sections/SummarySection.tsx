@@ -125,7 +125,7 @@ export function SummarySection() {
       </motion.div>
 
       {/* Visual separator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -140,7 +140,7 @@ export function SummarySection() {
             <span className="text-2xl font-bold text-white">2</span>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </Section>
   );
 }
